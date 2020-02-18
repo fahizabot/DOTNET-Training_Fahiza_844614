@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<form method="post"  onsubmit="return validation();">
+<table>
+	<tr>
+	<td>first name:</td><td><input type="text" id="fn" ></td>
+	</tr>
+	<tr>
+	<td>age:</td><td><input type="number" id="age"></td>
+	</tr>
+	<tr>
+	<td>login name:</td><td><input type="text" id="ln"></td>
+	</tr>
+	<tr>
+	<td>password:</td><td><input type="password" id="pwd"></td>
+	</tr>
+	<tr>
+	<td>con pwd:</td><td><input type="password" id="cpwd"></td>
+	</tr>
+	<tr>
+	<td>experience:</td><td><input type="number" id="exp"></td>
+	</tr>
+	<tr>
+	<td>sal expctd:</td><td><input type="number" id="sal"></td>
+	</tr>
+	<tr>
+	 <td><input type="submit" value="add new user"></td>
+	 <td><button type="reset" value="cancel">cancel</button></td>
+	 </tr>
+	 <tr><th>subscribe to news letter</th></tr>
+	 <tr><td>email:</td><td><input type="email"></td><td><input type="submit" value="subscribe"></td></tr>
+</table>
+</form>
+<script type="text/javascript">
+	function validation(){
+	        var efn = document.getElementById("fn").value;
+			var eage = document.getElementById("age").value;
+			var eln = document.getElementById("ln").value;
+	        var epwd = document.getElementById("pwd").value;
+			var ecpwd = document.getElementById("cpwd").value;
+			var eexp= document.getElementById("exp").value;
+			var esal = document.getElementById("sal").value;
+	       
+		   		   
+		   if(efn.length == 0) 
+	        {alert("first name is must"); return false;}
+			if(eage<16)
+			{alert("enter valid age"); return false;}
+			if(eln.length == 0) 
+	        {alert("login name is must"); return false;}
+	       if(epwd.length == 0)
+	        {alert("pwd must"); return false;}
+			if(ecpwd!=epwd)
+			{alert("both pwd and confrm pwd shd match"); return false;}
+			if(esal>=eexp*15000)
+			{alert("expect based on your experience"); return false;}
+			
+	return true;	
+}
+</script>
+
+</body>
+</html>
