@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <table width="100%">
+        <tr style="width:100%;height:100px;">
+            <td>
+                <table  style="width:100%">
+                    <tr>
+                        <td style="width:10%;height:100px;background-color:blueviolet">
+                            img here
+                       </td>
+                        <td style="background-color:blue">
+                           <h1>TRM</h1>
+                      </td>
+                  </tr>
+             </table>
+            </td>>
+        </tr>
+        <tr style="width:100%;height:100px;">
+            <td>
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:10%;height:100px;background-color:turquoise">
+                          bljifkj
+                        </td>
+                        <td>
+                            @RenderBody()
+                        </td>
+                    </tr>
+                </table>
+            </td>>
+        </tr>
+        
+        <tr style="width:100%;height:100px;background-color:blue">
+            <td>
+                copyright
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

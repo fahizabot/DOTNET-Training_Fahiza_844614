@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{Html.RenderAction("Index", "menu");}
+
+<div>
+   @using (Html.BeginForm("process", "myrazor", FormMethod.Post))
+    {
+       <h1>NEW TRAINING REQUEST</h1>
+      <span> Requirement Name: </span>
+      <br/>
+      @Html.TextBox("rn")
+       <br/>
+      <span>Skill Set:</span>
+      <br/>
+    @Html.DropDownList("lst", (SelectListItem[])ViewBag.dep)
+       <br/>
+       <span>Start Date</span>
+       <br/>
+    @Html.TextBox("sd")
+       <br/>
+       <span>End Date</span>
+       <br/>
+    @Html.TextBox("ed")
+       <br/>
+       <input type="submit" value="create Request"/>
+       <br/>
+    @Html.ActionLink("go to dashboard", "process", "myrazor")
+   } 
+
+</div>
+
